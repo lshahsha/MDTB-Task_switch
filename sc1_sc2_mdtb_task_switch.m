@@ -460,7 +460,7 @@ switch what
     case 'SURF:mdtb:map_con_transitions_id'
         % projects individual contrast map volume files for all the
         % transitions (256 for sc1) to workbench surface
-        % Example: sc1_sc2_mdtb_task_switch('SURF:mdtb:map_con_transitions_id', 'sn', [3])
+        % Example: , 'sn', [3])
     
         sn             = returnSubjs;   %% list of subjects
         atlas_res      = 32;     %% set it to 32 or 164
@@ -713,17 +713,17 @@ switch what
     case 'SURF:mdtb:groupmap_con_transitions_id'
         % creates group average contrast maps for all the transitions
         % Example: sc1_sc2_mdtb_task_switch('SURF:mdtb:groupmap_con_transitions_id', 'sn', [3])
-    
-        sn         = returnSubjs;   %% list of subjects
-        atlas_res  = 32;     %% set it to 32 or 164
+     
+        sn             = returnSubjs;   %% list of subjects
+        atlas_res      = 32;     %% set it to 32 or 164
         experiment_num = 1;      %% enter 1 for sc1 and 2 for sc2
-        glm        = 7;      %% glm number
-        replaceNaN = 1;      %% replacing NaNs
-        smooth     = 1;      %% add smoothing
-        kernel     = 1;      %% for smoothing
-        con_vs     = 'rest'; %% contrast was calculated against 'rest' or 'average'
+        glm            = 8;      %% glm number
+        replaceNaN     = 1;      %% replacing NaNs
+        smooth         = 1;      %% add smoothing
+        kernel         = 1;      %% for smoothing
+        con_vs         = 'rest'; %% contrast was calculated against 'rest' or 'average'
         
-        vararginoptions(varargin,{'sn', 'atlas_res', 'experiment_num', 'glm', 'replaceNaN', 'convs', 'smooth', 'kernel'});
+        vararginoptions(varargin,{'sn', 'atlas_res', 'experiment_num', 'glm', 'replaceNaN', 'con_vs', 'convs', 'smooth', 'kernel'});
         
         experiment = sprintf('sc%d', experiment_num);
         
