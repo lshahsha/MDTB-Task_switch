@@ -840,9 +840,9 @@ switch what
         % Example: sc1_sc2_mdtb_task_switch('SURF:mdtb:noiseCeiling_get_transitions_id_data')
         
         experiment_num = 1;      %% sc1 or sc2;
-        glm        = 7;
+        glm        = 8;
         atlas_res  = 32;     %% set it to 32 or 64
-        con_vs     = 'rest'; %% contrast vs 'rest' or 'average'
+        con_vs     = 'average_2'; %% contrast vs 'rest' or 'average'
         smooth     = 1;      %% use the smoothed data?
         kernel     = 1;      %% smoothing kernel used
         
